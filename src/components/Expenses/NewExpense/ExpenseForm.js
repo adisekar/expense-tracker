@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../../UI/Button/Button';
 import './ExpenseForm.css';
 
 const initialState = {
@@ -69,15 +70,15 @@ const ExpenseForm = ({ onSaveExpenseData, onCancel }) => {
                     <input
                         type='date'
                         min='2019-01-01'
-                        max='2022-12-31'
+                        max='2023-12-31'
                         value={userInput.enteredDate}
                         onChange={dateChangeHandler}
                     />
                 </div>
             </div>
             <div className='new-expense__actions'>
-                <button type="button" onClick={onCancel}>Cancel</button>
-                <button type='submit'>Add Expense</button>
+                <Button onClick={onCancel}>Cancel</Button>
+                <Button type='submit'>Add Expense</Button>
             </div>
         </form>
     );
